@@ -15,4 +15,53 @@ public class Ticket {
     private Date HoraIngreso;
     private Date HoraSalida;
     private int puesto;
+
+    public int getId() {
+        return id;
+    }
+
+    public Ticket(int id, Date HoraIngreso, Date HoraSalida, int puesto) {
+        this.id = id;
+        this.HoraIngreso = HoraIngreso;
+        this.HoraSalida = HoraSalida;
+        this.puesto = puesto;
+        
+    }
+
+    public Ticket() {
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getHoraIngreso() {
+        return HoraIngreso;
+    }
+
+    public void setHoraIngreso(Date HoraIngreso) {
+        this.HoraIngreso = HoraIngreso;
+    }
+
+    public Date getHoraSalida() {
+        return HoraSalida;
+    }
+
+    public void setHoraSalida(Date HoraSalida) {
+        this.HoraSalida = HoraSalida;
+    }
+
+    public int getPuesto() {
+        return puesto;
+    }
+
+    public void setPuesto(int puesto) {
+        this.puesto = puesto;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" + "id=" + id + ", HoraIngreso=" + HoraIngreso + ", HoraSalida=" + HoraSalida + ", puesto=" + puesto + '}';
+    }
+    
 }

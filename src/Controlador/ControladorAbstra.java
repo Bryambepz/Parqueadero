@@ -4,10 +4,33 @@
  */
 package Controlador;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author braya
  */
-public class ControladorAbstra {
+public abstract class ControladorAbstra<T> {
+    
+    private List<T> listaObjetos;
+    
+    public ControladorAbstra() {
+        this.listaObjetos = new ArrayList<>();
+    }
+    
+    public boolean create(T objeto){
+        return listaObjetos.add(objeto);
+    }
+    
+    public List<T> getListaObjetos() {
+        return listaObjetos;
+    }
+
+    public void setListaObjetos(List<T> listaObjetos) {
+        this.listaObjetos = listaObjetos;
+    }
     
 }
